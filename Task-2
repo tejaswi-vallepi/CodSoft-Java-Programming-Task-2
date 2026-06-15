@@ -1,0 +1,82 @@
+
+
+def calculate_grade(percentage):
+    """Returns grade based on percentage."""
+
+    if percentage >= 90:
+        return "A+"
+    elif percentage >= 80:
+        return "A"
+    elif percentage >= 70:
+        return "B"
+    elif percentage >= 60:
+        return "C"
+    elif percentage >= 50:
+        return "D"
+    else:
+        return "F"
+
+
+def main():
+    print("=" * 50)
+    print("         STUDENT GRADE CALCULATOR")
+    print("=" * 50)
+
+    try:
+        num_subjects = int(input("Enter the number of subjects: "))
+
+        if num_subjects <= 0:
+            print("Number of subjects must be greater than 0.")
+            return
+
+        total_marks = 0
+
+        # Taking marks for each subject
+        for i in range(1, num_subjects + 1):
+            while True:
+                try:
+                    marks = float(input(f"Enter marks for Subject {i} (0-100): "))
+
+                    if 0 <= marks <= 100:
+                        total_marks += marks
+                        break
+                    else:
+                        print("Marks must be between 0 and 100.")
+
+                except ValueError:
+                    print("Invalid input! Please enter numeric values only.")
+
+        # Calculations
+        average_percentage = total_marks / num_subjects
+        grade = calculate_grade(average_percentage)
+
+        # Display Results
+        print("\n" + "=" * 50)
+        print("               RESULT SUMMARY")
+        print("=" * 50)
+        print(f"Total Marks        : {total_marks:.2f}")
+        print(f"Average Percentage : {average_percentage:.2f}%")
+        print(f"Grade Obtained     : {grade}")
+
+        # Performance Message
+        if grade == "A+":
+            print("Excellent Performance! 🌟")
+        elif grade == "A":
+            print("Very Good Performance! 👍")
+        elif grade == "B":
+            print("Good Job! 😊")
+        elif grade == "C":
+            print("Satisfactory Performance.")
+        elif grade == "D":
+            print("Needs Improvement.")
+        else:
+            print("Work Hard and Try Again.")
+
+        print("=" * 50)
+
+    except ValueError:
+        print("Invalid input! Please enter a valid number of subjects.")
+
+
+# Run the program
+main()
