@@ -1,6 +1,14 @@
 # CodSoft-Java-Programming-Task-2
 # Student Grade Calculator
+Name:Vallepi.Tejaswi
 
+Company:CodSoft
+
+ID:BY26RY205358
+
+Duration:10th june 2026 to 10th july 2026
+
+Domain:Java Programming
 ## Overview
 
 The Student Grade Calculator is a Python-based console application developed to calculate a student's total marks, average percentage, and final grade based on marks entered for multiple subjects. The program includes input validation, grade classification, and performance feedback, making it a simple and effective academic utility.
@@ -69,3 +77,8 @@ Through this project, I learned:
 ## Conclusion
 
 This project demonstrates the practical application of Python programming concepts such as functions, loops, conditionals, and exception handling. It provides an efficient solution for calculating student grades and evaluating academic performance in a simple and user-friendly manner.
+## Output:
+
+
+https://github.com/user-attachments/assets/6f380c5b-d085-406a-9735-07d2e00b7e65
+
